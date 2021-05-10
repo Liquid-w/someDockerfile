@@ -48,10 +48,10 @@ if [ $ENABLE_UNICOM ]; then
         echo "$sub_dir"
         pwd=$(echo $pwds | cut -d ',' -f$i)
         appid="$(echo $appids | cut -d ',' -f$i)"
-        echo "UNICOM_USERNAME = '$username'" >/"$sub_dir"/config/.env
-        echo "UNICOM_PASSWORD = '$pwd'" >>/"$sub_dir"/config/.env
-        echo "UNICOM_APPID = '$appid'" >>/"$sub_dir"/config/.env
-        echo "ASYNC_TASKS = true" >>/"$sub_dir"/config/.env
+        echo "UNICOM_USERNAME = '$username'" >/"$sub_dir"/.env
+        echo "UNICOM_PASSWORD = '$pwd'" >>/"$sub_dir"/.env
+        echo "UNICOM_APPID = '$appid'" >>/"$sub_dir"/.env
+        echo "ASYNC_TASKS = true" >>/"$sub_dir"/.env
         i=$(expr $i + 1)
         echo "30 6,11,18 * * * cd /$sub_dir && node index.js unicom >> /logs/unicom${username:0:4}.log 2>&1 &" >>$mergedListFile
     done
