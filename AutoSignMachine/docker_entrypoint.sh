@@ -22,7 +22,7 @@ fi
 cd /pss
 echo "获取最新定时任务相关代码..."
 git reset --hard
-git pull origin main --rebase
+git pull origin master --rebase
 
 echo "------------------------------------------------执行定时任务任务shell脚本------------------------------------------------"
 sh -x /pss/AutoSignMachine/default_task.sh

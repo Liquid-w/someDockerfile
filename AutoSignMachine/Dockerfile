@@ -24,7 +24,7 @@ RUN mkdir /logs \
         && mkdir /pss \
         && cd /pss \
         && git init \
-        && git remote add origin https://github.com/Aaron-lv/someDockerfile \
+        && git remote add origin https://github.com/Liquid-w/someDockerfile \
         && git config core.sparsecheckout true \
         && echo AutoSignMachine >> /pss/.git/info/sparse-checkout \
         && git pull origin master --rebase
