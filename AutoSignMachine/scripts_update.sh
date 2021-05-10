@@ -53,7 +53,7 @@ if [ $ENABLE_UNICOM ]; then
         echo "UNICOM_APPID = '$appid'" >>/"$sub_dir"/config/.env
         echo "ASYNC_TASKS = true" >>/"$sub_dir"/config/.env
         i=$(expr $i + 1)
-        echo "*/20 6-23 * * * cd /$sub_dir && node index.js unicom >> /logs/unicom${username:0:4}.log 2>&1 &" >>$mergedListFile
+        echo "30 6,11,18 * * * cd /$sub_dir && node index.js unicom >> /logs/unicom${username:0:4}.log 2>&1 &" >>$mergedListFile
     done
 fi
 
